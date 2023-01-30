@@ -1,3 +1,5 @@
+import validator from 'validator';
+
 export class Staff {
 	constructor(
 		private id: string,
@@ -8,6 +10,11 @@ export class Staff {
 	) {
 		if (id.length < 36) {
 			throw new Error('Staff ID must be a valid UUID');
+		}
+		if (email === undefined || email === null || email === '') {
+			throw new Error('Staff email must be defined');
+		} else if (!validator.isEmail(email)) {
+			throw new Error('Staff email must be a valid email');
 		}
 	}
 
