@@ -1,7 +1,7 @@
 import { Given, When, Then } from '@cucumber/cucumber';
 import { expect } from 'chai';
 import { createStaff } from '../src';
-import { Staff } from '../src/models/Staff';
+import { Staff } from '../src/models/staff.model';
 
 Given('supervisor sends all info to create un {staff}', async function (staff) {
 	this.staff = staff;

@@ -1,4 +1,4 @@
-import { Staff } from './models/Staff';
+import { Staff } from './models/staff.model';
 
 export const listCourses = (staffID: string, promotionRef: string) => {
 	return [];
