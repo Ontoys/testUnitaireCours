@@ -1,7 +1,7 @@
 import { Given, When, Then } from '@cucumber/cucumber';
 import { expect } from 'chai';
 import { listCourses } from '../src';
-import { Staff } from '../src/Staff';
+import { Staff } from '../src/models/Staff';
 
 Given(
 	'a pilot and the promotion reference is {string}',
