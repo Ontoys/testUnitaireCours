@@ -12,8 +12,8 @@ export class Staff {
 		private password: string,
 		private type: StaffType
 	) {
-		if (codeCesi.length === 7) {
-			throw new Error('Staff ID must be a valid UUID');
+		if (codeCesi.length !== 7) {
+			throw new Error('Code Cesi must be 7 characters long');
 		}
 		if (email === undefined || email === null || email === '') {
 			throw new Error('Staff email must be defined');
