@@ -1,5 +1,5 @@
 import test, { ThrowsExpectation } from 'ava';
-import { Staff } from '../src/models/Staff';
+import { Staff } from '../src/models/staff.model';
 import { StaffType } from '../src/services/types.service';
 
 test('staff should be valid', (t) => {
