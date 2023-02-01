@@ -50,7 +50,7 @@ test('Intervenant should have a valid phone', (t) => {
 			new Code('2837263', CodeType.PERSON),
 			'anne',
 			'doe',
-			'0606060606',
+			'',
 			PersonType.INDEPEDANT
 		);
 	});
