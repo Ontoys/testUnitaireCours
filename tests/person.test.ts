@@ -24,7 +24,7 @@ test('person should not have an empty lastname', (t) => {
 });
 
 test('person of type internal must be an email with format (jdoe@cesi.fr)', (t) => {
-	const p = new Pilot(new Code('2837263', CodeType.PERSON), 'john', 'doe', '0606060606');
+	const p = new Pilot(new Code('2837263', CodeType.PERSON), 'john', 'doe');
 	t.is(p.email(), 'jdoe@cesi.fr');
 });
 
@@ -50,7 +50,7 @@ test('Intervenant should have a valid phone', (t) => {
 			new Code('2837263', CodeType.PERSON),
 			'anne',
 			'doe',
-			'',
+			'0606060606',
 			PersonType.INDEPEDANT
 		);
 	});
