@@ -33,10 +33,8 @@ export class Person {
 		}
 
 		if (
-			(_role === PersonRole.INTERVENANT &&
-				_phone !== null &&
-				!validator.isMobilePhone(_phone, 'fr-FR')) ||
-			_phone === null
+			((_role === PersonRole.INTERVENANT || _role === PersonRole.PILOT) &&
+				!validator.isMobilePhone(_phone || "", 'fr-FR'))
 		) {
 			throw new Error('Person phone number is not valid');
 		}
