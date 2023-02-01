@@ -1,16 +1,31 @@
 import { Code } from '../Code';
 import { Person } from './Person';
+import { Subject } from '../Subject';
 import { PersonRole, PersonType } from '../types';
 
-export class Referer extends Person  {
-	constructor(code: Code, firstName: string, lastName: string,personType: PersonType, personRole: PersonRole.PILOT | PersonRole.INTERVENANT, phone: string) {
-		super(
-			code,
-			firstName,
-			lastName,
-			personType,
-            personRole,
-			phone
-		);
+export abstract class Referer extends Person {
+	private _subjectsAproved: Subject[] = [];
+
+	constructor(
+		code: Code,
+		firstName: string,
+		lastName: string,
+		phone: string,
+		personeType: PersonType,
+		personRole: PersonRole
+	) {
+		super(code, firstName, lastName, personeType, personRole, phone);
+	}
+
+	addSubjectsAproved(subject: Subject): void {}
+
+	revokeSubjectsAproved(ref: string): void {}
+
+	getSubjectsAproved(): Subject[] {
+		return [];
+	}
+
+	subjectsAproved(): Subject[] {
+		return this._subjectsAproved;
 	}
 }

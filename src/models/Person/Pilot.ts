@@ -8,9 +8,9 @@ export class Pilot extends Referer {
 			code,
 			firstName,
 			lastName,
+			phone,
 			PersonType.INTERNAL,
-			PersonRole.PILOT,
-			phone
+			PersonRole.PILOT
 		);
 	}
 }
