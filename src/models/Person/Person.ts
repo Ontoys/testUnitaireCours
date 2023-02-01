@@ -1,11 +1,9 @@
 import { Code } from '../Code';
 import { PersonRole, PersonType } from '../types';
 import validator from 'validator';
-import { Subject } from '../Subject';
 
 export abstract class Person {
 	private _email: string;
-	private _subjectsAproved: Subject[] = [];
 
 	constructor(
 		private _code: Code,
@@ -65,9 +63,5 @@ export abstract class Person {
 
 	phone(): string | null {
 		return this._phone;
-	}
-
-	subjectsAproved(): Subject[] {
-		return this._subjectsAproved;
 	}
 }
