@@ -1,23 +1,30 @@
 export type UUID = string;
 export type Date = string;
+export type Alias = string;
+
+export enum CodeType {
+    PROMOTION,
+    PERSON,
+    SECTOR
+}
 
 export enum PersonType {
-    INTERNAL = 'internal',
-    CONTRACTOR = 'contractor',
-    INDEPEDANT = 'indepedant'
+    INTERNAL,
+    CONTRACTOR,
+    INDEPEDANT
 }
 
 export enum PersonRole {
-    PILOT = 'pilot',
-    INTERVENANT = 'intervenant',
-    ADMINISTRATOR = 'administrator',
-    STUDENT = 'student',   
-    HEIMDALL = 'heimdall'
+    PILOT,
+    INTERVENANT,
+    ADMINISTRATOR,
+    STUDENT ,
+    HEIMDALL
 }
 
 export enum Level {
-    RAN = 'RAN',
-    LVL5 = '5',
-    LVL6 = '6',
-    LVL7 = '7',
+    RAN,
+    LVL5,
+    LVL6,
+    LVL7,
 }
