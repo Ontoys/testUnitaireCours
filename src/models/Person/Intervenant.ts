@@ -1,8 +1,8 @@
 import { Code } from '../Code';
-import { Person } from './Person';
+import { Referer } from './Referer';
 import { PersonRole, PersonType } from '../types';
 
-export class Intervenant extends Person {
+export class Intervenant extends Referer {
 	constructor(
 		code: Code,
 		firstName: string,
