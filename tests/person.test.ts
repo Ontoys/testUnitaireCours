@@ -8,7 +8,7 @@ import { CodeType, PersonType } from '../src/models/types';
 test('pilot should not have an empty firstname', (t) => {
 	const error = t.throws(() => {
 		const code = new Code('2837263', CodeType.PERSON);
-		new Pilot(code, '', 'doe');
+		new Pilot(code, '', 'doe', '0606060606');
 	});
 
 	t.is(error?.message, 'Person firstname must have at least 2 characters');
@@ -17,14 +17,19 @@ test('pilot should not have an empty firstname', (t) => {
 test('person should not have an empty lastname', (t) => {
 	const error = t.throws(() => {
 		const code = new Code('2837263', CodeType.PERSON);
-		new Pilot(code, 'john', '');
+		new Pilot(code, 'john', '', '0606060606');
 	});
 
 	t.is(error?.message, 'Person lastname must have at least 2 characters');
 });
 
 test('person of type internal must be an email with format (jdoe@cesi.fr)', (t) => {
-	const p = new Pilot(new Code('2837263', CodeType.PERSON), 'john', 'doe');
+	const p = new Pilot(
+		new Code('2837263', CodeType.PERSON),
+		'john',
+		'doe',
+		'0606060606'
+	);
 	t.is(p.email(), 'jdoe@cesi.fr');
 });
 
@@ -50,7 +55,7 @@ test('Intervenant should have a valid phone', (t) => {
 			new Code('2837263', CodeType.PERSON),
 			'anne',
 			'doe',
-			'0606060606',
+			'060606060',
 			PersonType.INDEPEDANT
 		);
 	});
