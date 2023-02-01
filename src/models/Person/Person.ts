@@ -34,8 +34,7 @@ export abstract class Person {
 
 		if (
 			(_role === PersonRole.INTERVENANT &&
-				!validator.isMobilePhone(_phone || "", "fr-FR")) ||
-			_phone === null
+				!validator.isMobilePhone(_phone || "", "fr-FR"))
 		) {
 			throw new Error('Person phone number is not valid');
 		}
