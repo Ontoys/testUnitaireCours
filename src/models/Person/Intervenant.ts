@@ -1,8 +1,10 @@
 import { Code } from '../Code';
 import { Person } from './Person';
 import { PersonRole, PersonType } from '../types';
+import { Referer } from '../Cours/Referer';
+import { Subject } from '../Subject';
 
-export class Intervenant extends Person {
+export class Intervenant extends Referer {
 	constructor(
 		code: Code,
 		firstName: string,
@@ -14,9 +16,9 @@ export class Intervenant extends Person {
 			code,
 			firstName,
 			lastName,
+			phone,
 			intervenantType,
-			PersonRole.INTERVENANT,
-			phone
+			PersonRole.INTERVENANT
 		);
 	}
 }
